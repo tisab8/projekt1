@@ -17,7 +17,13 @@
           <City></City>
         </div>
       </div>
+      <div class="columns">
+        <div class="buttons column interests is-full">
+          <b-button type="is-primary" class="is-size-4-tablet ">Find places</b-button>
+        </div>
+      </div>
 </div>
+
 </template>
 
 <script>
