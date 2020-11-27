@@ -1,4 +1,26 @@
 <template>
+<div>
+
+    <b-navbar spaced>
+        <template slot="start">
+            <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/">Home</router-link>
+                        <router-view />
+            </b-navbar-item>
+            <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/ChooseInterests">Find Places</router-link>
+                        <router-view />
+            </b-navbar-item>
+             <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/Browse">Browse</router-link>
+                        <router-view />
+            </b-navbar-item>
+            <b-navbar-item active class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/About">About</router-link>
+                        <router-view />
+            </b-navbar-item>
+        </template>
+    </b-navbar>
 
     <div class="hero is-fullheight">
         <div class="hero-body ">
@@ -21,19 +43,19 @@
             </div>
         </div>
     </div>
-    
+</div>   
 </template>
 
 <style scoped>
 .blueStrap{
   background-color: rgb(11, 84, 113, 0.8);
-  padding: 2%;
+  padding: 5%;
   border-radius: 30px;
  
 }
 .whiteStrap{
   background-color: rgb(237, 239, 240, 0.7);
-  padding: 2%;
+  padding: 5%;
   border-radius: 30px;
 }
 h1,h2{

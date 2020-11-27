@@ -7,7 +7,7 @@
             <div class="column c2">
                 <b-field class="container">
                     <div class="columns">
-                        <b-datepicker class="column is-one-third is-offset-4"
+                        <b-datepicker class="column is-one-third is-offset-4" v-model="dateValue"
                             placeholder="Click to select..."
                             :min-date="minDate"
                             :max-date="maxDate">
@@ -26,9 +26,15 @@
 
             return {
                 date: new Date(),
+                dateValue:'',
                 minDate: new Date(today.getFullYear() , today.getMonth(), today.getDate()),
                 maxDate: new Date(today.getFullYear() + 18, today.getMonth(), today.getDate())
             }
+        },
+        watch: {
+             dateValue: function() {
+            this.$emit("child-dateValue", this.dateValue);
+        }   
         }
     }
 </script>

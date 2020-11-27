@@ -1,21 +1,23 @@
 <template>
-  <div id="app" class="pozadina ">
-    <Navbar></Navbar>
+  <div id="app" class="pozadina">
+     
+    <!--<div id="nav">
+      <router-link to="/">Home1</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>-->
+    <router-view />
     
   </div>
 </template>
-
 <script>
-import Navbar from './components/Navbar.vue'
 
 export default {
 name: 'App',
   components: {
-    Navbar,
+ 
   },
 }
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -28,9 +30,22 @@ name: 'App',
 
 .pozadina{
   padding-bottom: 20%;
-   background-image: url('~@/assets/images/pozadina.jpg');
+   background-image: url("~@/assets/images/pozadina.jpg");
    background-size: cover;
    background-repeat: repeat;
    background-color: black;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

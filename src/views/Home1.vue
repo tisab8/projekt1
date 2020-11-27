@@ -1,4 +1,26 @@
 <template>
+<div>
+    <b-navbar spaced>
+        <template slot="start">
+            <b-navbar-item active class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/">Home</router-link>
+                        <router-view />
+            </b-navbar-item>
+            <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/ChooseInterests">Find Places</router-link>
+                        <router-view />
+            </b-navbar-item>
+             <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/Browse">Browse</router-link>
+                        <router-view />
+            </b-navbar-item>
+            <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
+                 <router-link to="/About">About</router-link>
+                        <router-view />
+            </b-navbar-item>
+        </template>
+    </b-navbar>
+
     <div class="hero is-fullheight">
         <div class="hero-body wid">
             <div class="columns is-multiline">
@@ -21,7 +43,26 @@
             </div>
         </div>
     </div>
+
+</div>
 </template>
+
+<script>
+
+    export default {
+    name: 'Home1',
+        components: {
+           
+        },
+
+
+        data() {
+            return {
+                activeTab: 0,
+            }
+        }
+    }
+</script>
 
 <style scoped>
 .blueStrap{
