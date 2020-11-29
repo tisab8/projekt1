@@ -8,7 +8,7 @@
                         <router-view />
             </b-navbar-item>
             <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
-                 <router-link to="/ChooseInterests">Find Places</router-link>
+                 <router-link to="/ChooseInterests">Find events</router-link>
                         <router-view />
             </b-navbar-item>
              <b-navbar-item active class="is-size-3-desktop is-size-5-mobile">
@@ -44,9 +44,7 @@
         <section class="mt-6">
             <article class="media wid mb-6 columns is-multiline" v-for="event in eventsShow" :key="event.id">
                 <figure class="media-left mr-5 al column is-one-quarter-desktop is-full-mobile">
-                    <p class="image is-128x128 has-text-black mb-2 al2" :style="{ backgroundImage: `url(${event.image})` }">
-                        <!--ne prikazuje se slika-->
-                    </p>
+                    <img class="image is-128x128 has-text-black mb-2 al2" v-bind:src="'/img/' + event.image" /> 
                     <h6 active class="is-size-4 has-text-black">{{event.place}}</h6>
                     <h6 active class="is-size-4 has-text-black">{{event.city}}</h6>
                 </figure>
@@ -62,6 +60,13 @@
                 </div>
             </article>
         </section>
+    <div class="columns is-multiline" v-if="eventsShow.length === 0">
+    <div class="column is-two-thirds is-offset-2">
+        <div class="blueStrap">
+            <h1 class="title is-size-1-desktop is-size-1-tablet is-size-3-mobile has-text-white">No events currently match your search. </h1>
+        </div>
+    </div>
+    </div>
 
     </div>
 </div>
@@ -90,11 +95,14 @@ export default {
       }
     }   
     },
+     
+
     data() {
         return {
             events: eventsData,
             searchValue: "",
             eventsShowKey: 'all',
+            image: 'coffee.b2dfd254.jpg'
         }
     },
 }
@@ -129,6 +137,12 @@ export default {
 }
 .search{
     width: 100%;
+}
+.blueStrap{
+  background-color: rgb(11, 84, 113, 0.8);
+  padding: 5%;
+  border-radius: 30px;
+  text-align: center;
 }
 
 </style>

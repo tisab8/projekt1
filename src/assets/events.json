@@ -5,9 +5,9 @@
       "name": "Queen tribute",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a maximus urna. Nunc hendrerit aliquam laoreet. Proin egestas dolor a libero lacinia viverra. Maecenas augue ante, interdum convallis vestibulum at, hendrerit id ante. Sed vel suscipit nibh. ",
       "category": "concerts",
-      "date": "Sun Dec 06 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme)",
+      "date": "Sun Dec 06 2020",
       "city": "Pula",
-      "image": "'~@/assets/images/club.jpg'",
+      "image": "club.949d46d8.jpg",
       "show": true
     },
     {
@@ -16,9 +16,9 @@
       "name": "Italian night",
       "description": "Nunc mollis porta justo, ac dictum arcu sodales ac. Cras id pulvinar dui, id congue nisl. Sed suscipit rutrum quam a tincidunt. Nam eu nulla rhoncus, egestas nibh ac, lacinia eros. Etiam accumsan metus non risus rutrum pretium. Fusce tempor erat sem, at vestibulum elit condimentum id. Curabitur ac turpis sem. Morbi ut gravida justo.",
       "category": "lunch",
-      "date": "Thu Dec 10 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Thu Dec 10 2020",
       "city": "Zagreb",
-      "image": "'~@/assets/images/restoran.jpg'",
+      "image": "restoran.026c0af1.jpg",
       "show": true
     },
     {
@@ -27,9 +27,9 @@
       "name": "Fresh coffee",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a maximus urna. Nunc hendrerit aliquam laoreet. Proin egestas dolor a libero lacinia viverra. Maecenas augue ante, interdum convallis vestibulum at, hendrerit id ante. Sed vel suscipit nibh. ",
       "category": "coffee",
-      "date": "Thu Dec 10 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Thu Dec 10 2020",
       "city": "Zagreb",
-      "image": "'~@/assets/images/coffee.jpg'",
+      "image": "coffee.b2dfd254.jpg",
       "show": true
     },
     {
@@ -38,9 +38,9 @@
       "name": "Pub quiz",
       "description": "Nunc mollis porta justo, ac dictum arcu sodales ac. Cras id pulvinar dui, id congue nisl. Sed suscipit rutrum quam a tincidunt. Nam eu nulla rhoncus, egestas nibh ac, lacinia eros. Etiam accumsan metus non risus rutrum pretium. Fusce tempor erat sem, at vestibulum elit condimentum id. Curabitur ac turpis sem. Morbi ut gravida justo. ",
       "category": "pubQuiz",
-      "date": "Sat Dec 12 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Sat Dec 12 2020",
       "city": "Pula",
-      "image": "~@/assets/images/pub.jpg",
+      "image": "pub.9723a50a.jpg",
       "show": true
     },
     {
@@ -49,9 +49,9 @@
       "name": "Arctic Monkeys tribute",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a maximus urna. Nunc hendrerit aliquam laoreet. Proin egestas dolor a libero lacinia viverra. Maecenas augue ante, interdum convallis vestibulum at, hendrerit id ante. Sed vel suscipit nibh. ",
       "category": "concerts",
-      "date": "Sat Dec 12 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Sat Dec 12 2020",
       "city": "Zagreb",
-      "image": "'~@/assets/images/club.jpg'",
+      "image": "club.949d46d8.jpg",
       "show": false
     },
     {
@@ -60,9 +60,9 @@
       "name": "Mexican night",
       "description": "Nunc mollis porta justo, ac dictum arcu sodales ac. Cras id pulvinar dui, id congue nisl. Sed suscipit rutrum quam a tincidunt. Nam eu nulla rhoncus, egestas nibh ac, lacinia eros. Etiam accumsan metus non risus rutrum pretium. Fusce tempor erat sem, at vestibulum elit condimentum id. Curabitur ac turpis sem. Morbi ut gravida justo.",
       "category": "lunch",
-      "date": "Sat Dec 12 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Sat Dec 12 2020",
       "city": "Zagreb",
-      "image": "'~@/assets/images/restoran.jpg'",
+      "image": "restoran.026c0af1.jpg",
       "show": false
     },
     {
@@ -71,9 +71,9 @@
       "name": "Buy one get one free",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a maximus urna. Nunc hendrerit aliquam laoreet. Proin egestas dolor a libero lacinia viverra. Maecenas augue ante, interdum convallis vestibulum at, hendrerit id ante. Sed vel suscipit nibh. ",
       "category": "coffee",
-      "date": "Fri Dec 11 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Fri Dec 11 2020",
       "city": "Zagreb",
-      "image": "'~@/assets/images/coffee.jpg'",
+      "image": "coffee.b2dfd254.jpg",
       "show": false
     },
     {
@@ -82,9 +82,20 @@
       "name": "Pub quiz2",
       "description": "Nunc mollis porta justo, ac dictum arcu sodales ac. Cras id pulvinar dui, id congue nisl. Sed suscipit rutrum quam a tincidunt. Nam eu nulla rhoncus, egestas nibh ac, lacinia eros. Etiam accumsan metus non risus rutrum pretium. Fusce tempor erat sem, at vestibulum elit condimentum id. Curabitur ac turpis sem. Morbi ut gravida justo. ",
       "category": "pubQuiz",
-      "date": "Thu Dec 10 2020 00:00:00 GMT+0100 (srednjoeuropsko standardno vrijeme) ",
+      "date": "Thu Dec 10 2020",
       "city": "Pula",
-      "image": "~@/assets/images/pub.jpg",
+      "image": "pub.9723a50a.jpg",
+      "show": false
+    },
+    {
+      "id": 9,
+      "place": "Coffee shop3",
+      "name": "Open mic night",
+      "description": "Nunc mollis porta justo, ac dictum arcu sodales ac. Cras id pulvinar dui, id congue nisl. Sed suscipit rutrum quam a tincidunt. Nam eu nulla rhoncus, egestas nibh ac, lacinia eros. Etiam accumsan metus non risus rutrum pretium. Fusce tempor erat sem, at vestibulum elit condimentum id. Curabitur ac turpis sem. Morbi ut gravida justo. ",
+      "category": "performances",
+      "date": "Tue Dec 15 2020",
+      "city": "Zagreb",
+      "image": "pub.9723a50a.jpg",
       "show": false
     }
   ]

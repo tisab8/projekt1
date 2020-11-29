@@ -43,10 +43,11 @@ const routes = [
     component: Browse
   },
   
+  
 ]
 
 const router = new VueRouter({
-  routes // short for `routes: routes`
+  routes: routes
 })
 
 new Vue({

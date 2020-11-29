@@ -7,7 +7,7 @@
                         <router-view />
             </b-navbar-item>
             <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
-                 <router-link to="/ChooseInterests">Find Places</router-link>
+                 <router-link to="/ChooseInterests">Find events</router-link>
                         <router-view />
             </b-navbar-item>
              <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
@@ -37,6 +37,12 @@
                 <div class="column is-one-third is-offset-4">
                     <div class="blueStrap1">
                          <router-link to="/ChooseInterests"><h1 class="title is-size-1-desktop is-size-1-tablet is-size-2-mobile has-text-white">Get Started</h1></router-link>
+                        <router-view />
+                    </div>
+                </div>
+                 <div class="column is-one-third is-offset-4">
+                    <div class="whiteStrap">
+                        <router-link to="/Browse"><a v-on:click="eventsShowKey = 'all'" :class="{ active: eventsShowKey == 'all' }"><h1 class="title is-size-1-desktop is-size-1-tablet is-size-2-mobile subtitle">Browse events</h1></a></router-link>
                         <router-view />
                     </div>
                 </div>
@@ -81,7 +87,7 @@
   background-color: rgb(237, 239, 240, 0.7);
   padding: 5%;
   border-radius: 30px;
-  text-align: left;
+  text-align: center;
 }
 
 .wid{

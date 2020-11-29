@@ -7,7 +7,7 @@
                         <router-view />
             </b-navbar-item>
             <b-navbar-item active class="is-size-3-desktop is-size-5-mobile">
-                 <router-link to="/ChooseInterests"><a v-on:click="empty">Find Places</a></router-link>
+                 <router-link to="/ChooseInterests"><a v-on:click="empty">Find events</a></router-link>
                         <router-view />
             </b-navbar-item>
              <b-navbar-item class="is-size-3-desktop is-size-5-mobile">
@@ -31,7 +31,7 @@
       <div class="columns">
          <div class="column is-full">
           <Date @child-dateValue="dateValue1"></Date>
-          
+        
         </div>
       </div>
 
@@ -44,7 +44,7 @@
       <div class="columns">
         <div class="buttons column interests is-full">
           <b-button v-if="check && date && city"  v-on:click="find = true" type="is-primary" class="is-size-4-tablet">Find places</b-button>
-          <b-button v-else type="is-primary" class="is-size-4-tablet" disabled>Find places</b-button>
+          <b-button v-else type="is-primary" class="is-size-4-tablet" disabled>Find events</b-button>
         </div>
       </div>
     </form>
@@ -54,9 +54,7 @@
     <section class="mt-6">
             <article class="media wid mb-6 columns is-multiline" v-for="event in eventsShow" :key="event.id">
                 <figure class="media-left mr-5 al column is-one-quarter-desktop is-full-mobile">
-                    <p class="image is-128x128 has-text-black mb-2 al2" :style="{ backgroundImage: `url(${event.image})` }">
-                        <!--ne prikazuje se slika-->
-                    </p>
+                   <img class="image is-128x128 has-text-black mb-2 al2" v-bind:src="'/img/' + event.image" />
                     <h6 active class="is-size-4 has-text-black">{{event.place}}</h6>
                     <h6 active class="is-size-4 has-text-black">{{event.city}}</h6>
                 </figure>
@@ -70,7 +68,10 @@
                     </div>
                 </div>
             </article>
+            <router-link to="/ChooseInterests"> <b-button v-if="eventsShow.length > 0" type="is-primary" class="is-size-4-tablet" v-on:click="empty">Find more events</b-button></router-link>
+                        <router-view />
         </section>
+        
  </div>
 
   <div class="columns is-multiline" v-if="eventsShow.length === 0">
@@ -130,7 +131,7 @@ export default {
          return events.filter(events=>{return events.category.match(this.check) } )
     },
     dateFilter: function(events){
-         return events.filter(events=>{return events.date.includes(this.date)} )
+         return events.filter(events=>{return events.date.includes(this.date.toDateString())} )
     },
    
 
