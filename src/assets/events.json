@@ -7,7 +7,7 @@
       "category": "concerts",
       "date": "Sun Dec 06 2020",
       "city": "Pula",
-      "image": "club.949d46d8.jpg",
+      "image": "club.jpg",
       "show": true
     },
     {
@@ -18,7 +18,7 @@
       "category": "lunch",
       "date": "Thu Dec 10 2020",
       "city": "Zagreb",
-      "image": "restoran.026c0af1.jpg",
+      "image": "restoran.jpg",
       "show": true
     },
     {
@@ -29,7 +29,7 @@
       "category": "coffee",
       "date": "Thu Dec 10 2020",
       "city": "Zagreb",
-      "image": "coffee.b2dfd254.jpg",
+      "image": "coffee.jpg",
       "show": true
     },
     {
@@ -40,7 +40,7 @@
       "category": "pubQuiz",
       "date": "Sat Dec 12 2020",
       "city": "Pula",
-      "image": "pub.9723a50a.jpg",
+      "image": "pub.jpg",
       "show": true
     },
     {
@@ -51,7 +51,7 @@
       "category": "concerts",
       "date": "Sat Dec 12 2020",
       "city": "Zagreb",
-      "image": "club.949d46d8.jpg",
+      "image": "club.jpg",
       "show": false
     },
     {
@@ -62,7 +62,7 @@
       "category": "lunch",
       "date": "Sat Dec 12 2020",
       "city": "Zagreb",
-      "image": "restoran.026c0af1.jpg",
+      "image": "restoran.jpg",
       "show": false
     },
     {
@@ -73,7 +73,7 @@
       "category": "coffee",
       "date": "Fri Dec 11 2020",
       "city": "Zagreb",
-      "image": "coffee.b2dfd254.jpg",
+      "image": "coffee.jpg",
       "show": false
     },
     {
@@ -84,7 +84,7 @@
       "category": "pubQuiz",
       "date": "Thu Dec 10 2020",
       "city": "Pula",
-      "image": "pub.9723a50a.jpg",
+      "image": "pub.jpg",
       "show": false
     },
     {
@@ -95,7 +95,7 @@
       "category": "performances",
       "date": "Tue Dec 15 2020",
       "city": "Zagreb",
-      "image": "pub.9723a50a.jpg",
+      "image": "pub.jpg",
       "show": false
     }
   ]
