@@ -44,7 +44,7 @@
         <section class="mt-6">
             <article class="media wid mb-6 columns is-multiline" v-for="event in eventsShow" :key="event.id">
                 <figure class="media-left mr-5 al column is-one-quarter-desktop is-full-mobile">
-                    <img class="image is-128x128 has-text-black mb-2 al2" v-bind:src="'/img/' + event.image" /> 
+                    <img :src='imageShow(event)' class="image is-128x128 has-text-black mb-2 al2">
                     <h6 active class="is-size-4 has-text-black">{{event.place}}</h6>
                     <h6 active class="is-size-4 has-text-black">{{event.city}}</h6>
                 </figure>
@@ -102,9 +102,14 @@ export default {
             events: eventsData,
             searchValue: "",
             eventsShowKey: 'all',
-            image: 'coffee.b2dfd254.jpg'
         }
     },
+
+    methods: {
+    imageShow: function(events) {
+      return require('@/assets/images/' + events.image)
+    },
+    }
 }
 
 </script>
