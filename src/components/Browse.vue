@@ -149,5 +149,9 @@ export default {
   border-radius: 30px;
   text-align: center;
 }
+html, 
+body {
+    overflow-x: hidden;
+}
 
 </style>

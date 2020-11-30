@@ -47,4 +47,8 @@
   max-width: 98%;
   margin: auto;
 }
+html, 
+body {
+    overflow-x: hidden;
+}
 </style>

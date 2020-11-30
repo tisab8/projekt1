@@ -54,6 +54,9 @@
   border-radius: 15px;
    padding:5%;
 }
-
+html, 
+body {
+    overflow-x: hidden;
+}
 
 </style>

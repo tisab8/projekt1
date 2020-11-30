@@ -72,5 +72,8 @@ h1,h2{
 .image2{
     width:55px;
 }
-
+html, 
+body {
+    overflow-x: hidden;
+}
 </style>
