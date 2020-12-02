@@ -69,7 +69,7 @@
                     <template>
                       <section>
                         <b-tabs type="is-toggle" position="is-centered" class="block" size="is-large">
-                            <b-tab-item :label="event.name">
+                            <b-tab-item :label="eventM.name">
                                  <div class="card-image">
                                     <figure class="image is-16by9">
                                         <img v-bind:src="pathM2" alt="Image">
@@ -94,7 +94,7 @@
                                 </div>
                             </b-tab-item>
 
-                            <b-tab-item :label="event.place">
+                            <b-tab-item :label="eventM.place">
                                 <div class="card-content">
                                     <div class="media columns">
                                         <div class="media-content column">
