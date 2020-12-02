@@ -48,18 +48,91 @@
                     <h6 active class="is-size-4 has-text-black">{{event.place}}</h6>
                     <h6 active class="is-size-4 has-text-black">{{event.city}}</h6>
                 </figure>
-                <div class="media-content column">
-                    <div class="content grey">
+                <div class="media-content column is-two-quarters-desktop is-full-mobile">
+                    <div class="content grey columns event">
+                      <div class="column is-three-quarters-desktop is-full-mobile">
                         <h6 active class="is-size-3">{{event.name}}</h6>
-                        <h6 active class="is-size-4 has-text-black">{{event.date.substring(0,15)}}</h6>
-                        <p class="is-size-5">
-                            {{event.description}}
+                        <h6 active class="is-size-4 has-text-black">{{event.date}}</h6>
+                        <p class="is-size-5 subtitle">
+                            {{event.shortDescription}}
                         </p>
+                      </div>
+                         <b-button type="is-primary" class="column is-one-quarter-desktop is-full-mobile is-size-5" @click="modalW(event)">More</b-button>
                     </div>
-                
+                 
                 </div>
-            </article>
-        </section>
+
+
+
+                <b-modal v-model="isCardModalActive" :width="640" scroll="keep">
+                  <div class="card">
+                    <template>
+                      <section>
+                        <b-tabs type="is-toggle" position="is-centered" class="block" size="is-large">
+                            <b-tab-item :label="event.name">
+                                 <div class="card-image">
+                                    <figure class="image is-16by9">
+                                        <img v-bind:src="pathM2" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content details mb-4">
+                                            <p class="title is-2">{{eventM.name}}</p>
+                                            <p class="title is-size-4 is-size-5-mobile">{{eventM.date}} {{eventM.time}}</p>
+                                            <p class="title is-size-5-desktop is-size-6-mobile">{{eventM.city}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="content subtitle is-size-5-desktop is-size-6-mobile mb-6">
+                                      <hr>
+                                      {{eventM.description}}
+                                    </div>
+                                    <hr>
+                                    <div class="columns">
+                                      <b-button type="is-primary" class="column mt-4 is-one-third-desktop is-offset-one-third-desktop is-full-mobile is-size-5" @click="isCardModalActive = false">Close</b-button>
+                                    </div>
+                                </div>
+                            </b-tab-item>
+
+                            <b-tab-item :label="event.place">
+                                <div class="card-content">
+                                    <div class="media columns">
+                                        <div class="media-content column">
+                                            <figure class="image2">
+                                                <img v-bind:src="pathM1" alt="Image" class="imageM">
+                                                <hr>
+                                              <div class="details mt-6">
+                                                <p class="title is-size-1-desktop is-size-3-mobile mt-4">{{eventM.place}}</p>
+                                               <p class="title is-size-4-desktop is-size-6-mobile">{{eventM.city}}</p>
+                                              </div>
+                                              <hr>
+                                              <div class="mt-6">
+                                                <p class="title is-size-4-desktop is-size-5-mobile mt-4">{{eventM.placeDescription}}</p>
+                                              </div>
+                                              <hr>
+                                               <div class="column">
+                                                  <div class="whiteStrap">
+                                                      <a :href="pathFacebook"  target="_blank"> <img class="image3" src="@/assets/images/facebook.png"> </a>
+                                                      <a :href="pathInstagram"  target="_blank"> <img class="image4 pb-2 ml-4" src="@/assets/images/instagram.png"></a>
+                                                  </div>
+                                              </div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="columns">
+                                      <b-button type="is-primary" class="column mt-4 is-one-third-desktop is-offset-one-third-desktop is-full-mobile is-size-5" @click="isCardModalActive = false">Close</b-button>
+                                    </div>
+                                </div>
+                            </b-tab-item>
+                        </b-tabs>
+                      </section>
+                    </template>
+                  </div>
+                  
+                </b-modal>
+
+        </article>
+      </section>
     <div class="columns is-multiline" v-if="eventsShow.length === 0">
     <div class="column is-two-thirds is-offset-2">
         <div class="blueStrap">
@@ -69,6 +142,7 @@
     </div>
 
     </div>
+
 </div>
 </template>
 
@@ -102,6 +176,11 @@ export default {
             events: eventsData,
             searchValue: "",
             eventsShowKey: 'all',
+            isCardModalActive: false,
+            eventM: '',
+            pathM:'',
+            pathFacebook:'',
+            pathInstagram:''
         }
     },
 
@@ -109,11 +188,46 @@ export default {
     imageShow: function(events) {
       return require('@/assets/images/' + events.image)
     },
+    modalW: function(events) {
+      this.isCardModalActive = true,
+      this.eventM = events,
+      this.pathM1 = require('@/assets/images/' + this.eventM.image),
+      this.pathM2 = require('@/assets/images/' + this.eventM.banner),
+      this.pathFacebook = this.eventM.pathFacebook,
+      this.pathInstagram = this.eventM.pathInstagram
+    },
     }
 }
 
 </script>
 <style scoped>
+.image3{
+    width:70px;
+}
+.image4{
+    width:55px;
+}
+.image2{
+  width:80%;
+  margin: auto;
+}
+.imageM{
+border-radius: 30px;
+border-color:  rgb(11, 84, 113, 0.5);
+border-style: solid;
+border-width: 4px;
+}
+.details{
+  background-color: rgb(11, 84, 113, 0.5);
+  padding: 2%;
+  border-radius: 30px;
+}
+.event{
+  background-color: rgb(237, 235, 230, 0.9);
+  border-radius: 10px;
+  border-style: none;
+  width: 100%;
+}
 .wid{
   max-width: 95%;
   margin: auto;
@@ -133,7 +247,6 @@ export default {
   text-align: center;
 }
 .grey{
-  background-color: rgb(237, 235, 230, 0.9);
   border-radius: 10px;
   padding: 3%;
   width:100%;
